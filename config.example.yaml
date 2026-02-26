@@ -1,0 +1,52 @@
+# OpenBridge — Configuration
+# Copy this to config.yaml and edit
+
+# ── Your channel ──────────────────────────────────────────────
+channel:  your_twitch_channel   # lowercase Twitch channel name
+streamer: YourName              # your display name (for mod commands)
+headless: false                 # false = you see the browser; true = runs invisible
+
+# ── Agents ────────────────────────────────────────────────────
+agents:
+
+  chat:
+    enabled: true
+    hype_threshold: 15          # hype messages in 10s → triggers a clip
+    command_cooldown: 30        # seconds between same !command
+    welcome_raiders: true
+    socials_message: "Join the Discord: discord.gg/yourserver"
+    custom_commands:
+      specs:    "CPU: i9 | GPU: RTX 4090 | RAM: 64GB"
+      schedule: "Live Mon/Wed/Fri 7PM EST"
+      lurk:     "Thanks for the lurk! Every view counts!"
+
+  clip:
+    enabled: true
+    clip_cooldown: 60           # min seconds between auto-clips
+
+  shield:
+    enabled: true
+    sensitivity: medium         # low / medium / high
+    timeout_duration: 600
+
+  intel:
+    enabled: true
+    post_stream_summary: true
+
+  # These are disabled until you're ready — enable when you want
+  social:
+    enabled: false
+    platforms: [twitter, discord]
+    post_on_go_live: true
+    post_clips: true
+    discord_server:  "Your Server Name"
+    discord_channel: "stream-announcements"
+
+  revenue:
+    enabled: false
+
+# ── Platforms ─────────────────────────────────────────────────
+platforms:
+  twitch:  { enabled: true }
+  kick:    { enabled: false }
+  youtube: { enabled: false }
