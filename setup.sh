@@ -1,11 +1,15 @@
 #!/bin/bash
-# OpenBridge — One-command setup
+# OpenBridge — One-command setup (legacy)
+# NEW USERS: Run 'python wizard.py' instead for an easier experience!
 
 set -e
 
 echo ""
-echo "  🌉  🌉  OpenBridge Setup"
+echo "  🌉  🌉  OpenBridge Setup (Legacy)"
 echo "  ==================="
+echo ""
+echo "  💡 TIP: For a friendlier setup, run:"
+echo "     python wizard.py"
 echo ""
 
 # Check Python
@@ -20,7 +24,7 @@ echo "→ Installing Chromium browser..."
 playwright install chromium
 
 # Create dirs
-mkdir -p logs sessions
+mkdir -p logs sessions data
 
 # Copy config if not exists
 if [ ! -f config.yaml ]; then
